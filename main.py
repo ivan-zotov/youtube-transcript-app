@@ -42,7 +42,7 @@ def get_transcript():
             return jsonify({'text': None, 'error': 'Не удалось извлечь ID видео из предоставленной ссылки.'})
         
         # Попытка получить транскрипт
-        transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=['ru', 'en'])
+        transcript = YouTubeTranscriptApi.get_transcript(video_id)
         text = ' '.join([entry['text'] for entry in transcript])
         logger.info('Транскрипт успешно получен.')
         return jsonify({'text': text, 'error': None})
