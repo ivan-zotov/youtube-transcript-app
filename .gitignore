@@ -1,6 +1,2 @@
+# Виртуальное окружение
 venv/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.env
