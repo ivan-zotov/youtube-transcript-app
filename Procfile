@@ -1,2 +1,2 @@
-web: gunicorn main:app --bind 0.0.0.0:8000
+web: gunicorn main:app --bind 0.0.0.0:$PORT
 web: python main.py
