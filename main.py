@@ -63,5 +63,5 @@ def get_transcript():
     return jsonify({'text': None, 'error': error_message})
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', $PORT))
+    port = int(os.environ.get('PORT', 8000))
     app.run(debug=False, host='0.0.0.0', port=port)
