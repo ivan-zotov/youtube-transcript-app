@@ -43,7 +43,7 @@ def get_transcript():
         
         # Попытка получить транскрипт
         transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=['en', 'ru'])
-        text = ' '.join([entry['text'] for entry in transcript])
+        text = '\n'.join([entry['text'] for entry in transcript])
         logger.info('Транскрипт успешно получен.')
         return jsonify({'text': text, 'error': None})
     
